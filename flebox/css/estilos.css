@@ -1,0 +1,281 @@
+html{
+    font-size: 16px;
+}
+p{
+    font-size: 1em;
+}
+h1{
+    font-size: 2em;
+}
+body{
+    background-color: rgb(14, 14, 54);
+}
+nav{
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: black;
+    font-family: 'Marcellus', serif;
+    font-size: 1.3em;
+    padding: 1rem ;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover{
+    background-color: #0B3860;
+    width: 100%;
+}
+
+.navbar-button{
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+    font-size: 1em;
+    padding: 0.5rem;
+    font-family: 'Marcellus',serif;
+    color: white;
+}
+
+.item{
+    padding: 1rem;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+}
+.navbar-button{
+    background-color: rgba(33, 33, 249, 0.861);
+    padding: 0.5rem 1rem;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Marcellus',serif;
+    font-size: 1em;
+ }
+  
+ .menu i {
+    margin-right: 0.5rem;
+ }
+
+ .menu{
+    background-color: rgba(1, 10, 52, 0.838);
+ }
+ .menu-hr{
+    width: 90%;
+    background-color: #fff;
+ }
+
+ .logo img{
+    height: 3.5rem;
+ }
+
+ .logo{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.logo img{
+    width: 80%;
+    max-width: 200px;
+}
+.logo i{
+    color: white;
+    font-size: 2rem;
+}
+
+ #features{
+    background: url(../img/index/bg-features.png);
+    color: white;
+    padding-top: 1rem;
+ }
+
+ .features-title{
+    background-color: rgba(0, 0, 0, 0.35);
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.5;
+ }
+
+ .features-description{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+ }
+
+ .feature{
+    width: 25%;
+    min-width: 180px;
+    max-width: 230px;
+    margin: 0.8rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+ }
+
+ .feature i{
+    font-size: 2.2em;
+    margin-bottom: 1.5rem;
+ }
+
+ .feature-blue{
+    background-color: #00325eae;
+ }
+ 
+ .feature-black{
+    background-color: rgba(0,0,0,0.59);
+ }
+@media screen and (min-width: 1024px) {
+    
+    nav{
+        display: flex;
+        flex-direction: row;
+        width: 97.4%;
+        justify-content: space-between;
+        background-color: black ;
+    }
+    .logo{
+        padding: 1rem;
+    }
+    .logo img{
+        width: 100%;
+        max-width: 180px;
+    }
+    .logo i {
+        display: none;
+    }
+    .menu{
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .menu-hr{
+        display: none ;
+    }
+    .navbar-button{
+        background-color: blue;
+    }
+}
+
+/* CSS GRID */
+
+nav{
+    grid-area: nav;
+    display: grid;
+    grid-template-areas: 
+        "logo"
+        "menu";
+    font-family: 'Marcellus', serif;
+    font-size: 1.3em;
+}
+.logo{
+    grid-area:logo;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "logo-img menu-bars";
+    background-color: black;
+    padding: 1rem;
+}
+.logo img {
+    justify-self: start;
+    width: 80%;
+    max-width: 180px;
+}
+.logo i{
+    grid-area: menu-bars;
+    justify-self: end;
+    color: white;
+    font-size: 2rem;
+}
+.menu{
+    grid-area: menu;
+    display: grid;
+    background-color: rgba(1, 10, 52, 0.838);
+}
+.menu-hr{
+    width: 90%;
+    background-color: white;
+    justify-self: center;
+}
+.item{
+    padding: 1rem 0;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #0B3860;
+    width: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+.navbar-button{
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+    font-size: 1em;
+    padding: 0.5rem;
+    font-family: 'Marcellus' serif;
+    color: white;
+}
+#banner{
+    background-image: url('../img/index//image.png');
+}
+@media  screen and (min-width:1024px){
+ 
+}
+nav{
+    background-color: black;
+    grid-template-columns: 200px auto;
+    grid-template-areas: 
+    "logo menu";
+}
+.logo img {
+    width: 100%;
+}
+.logo i{
+    display: none;
+}
+.menu{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.menu-hr{
+    display: none ;
+}
+
+.item{
+    margin: 0 1rem;
+    align-self: center;
+}
+nav a {
+    text-align: left;
+}
+nav a:hover{
+    background-color: transparent;
+    color: blue;
+}
+.navbar-button{
+    background-color: blue;
+    align-self: center;
+}
